@@ -1,0 +1,10 @@
+import db from "mongoose";
+db.connect(
+  "mongodb://usuario_prueba:123@ac-sw6hbss-shard-00-00.w6ghmta.mongodb.net:27017,ac-sw6hbss-shard-00-01.w6ghmta.mongodb.net:27017,ac-sw6hbss-shard-00-02.w6ghmta.mongodb.net:27017/marketplace?replicaSet=atlas-h0gfs6-shard-0&ssl=true&authSource=admin",
+)
+  .then(() => console.log("conectado a la db"))
+  .catch((e) => {
+    console.log(e.message);
+  });
+
+export { db };
